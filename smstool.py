@@ -15,8 +15,18 @@ def authenticate():
 
 def send_sms_termux(number, message):
     """Send SMS using Termux"""
-    os.system(f'termux-sms-send -n {number} "{message}"')
-    print(f"[+] SMS Sent to {number}: {message}")
+    # Debugging: Print the command before execution
+    print(f"[DEBUG] Executing Termux command to send SMS: termux-sms-send -n {number} \"{message}\"")
+    
+    # Execute the termux-sms-send command
+    result = os.system(f'termux-sms-send -n {number} "{message}"')
+
+    # Check the result of the command
+    if result == 0:
+        print(f"[+] SMS Sent to {number}: {message}")
+        log_sms(number, message)  # Log the sent message
+    else:
+        print("[!] Failed to send SMS.")
 
 def send_bulk_sms(numbers, message, num_messages):
     """Send multiple SMS to numbers"""
@@ -24,6 +34,11 @@ def send_bulk_sms(numbers, message, num_messages):
         for number in numbers:
             send_sms_termux(number, message)
             time.sleep(1)  # Add a delay between sending messages to avoid spamming
+
+def log_sms(number, message):
+    """Log SMS to a file"""
+    with open("sms_log.txt", "a") as log_file:
+        log_file.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - To: {number} - {message}\n")
 
 def view_logs():
     """View the SMS logs"""
@@ -37,11 +52,6 @@ def view_logs():
                 print("[!] No logs found.")
     else:
         print("[!] No logs found.")
-
-def log_sms(number, message):
-    """Log SMS to a file"""
-    with open("sms_log.txt", "a") as log_file:
-        log_file.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - To: {number} - {message}\n")
 
 def main():
     """Main function"""

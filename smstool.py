@@ -1,3 +1,4 @@
+
 import os
 import time
 
@@ -28,6 +29,8 @@ def send_sms_termux(number, message):
     else:
         print("[!] Failed to send SMS.")
         print(f"[DEBUG] Command failed with result code: {result}")
+        # Send an SMS back indicating failure
+        send_sms_termux(number, "Failed to send your message. There was an error.")
 
 def send_bulk_sms(numbers, message, num_messages):
     """Send multiple SMS to numbers"""

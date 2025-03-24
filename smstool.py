@@ -18,7 +18,7 @@ def send_sms_termux(number, message):
     # Debugging: Print the command before execution
     print(f"[DEBUG] Executing Termux command to send SMS: termux-sms-send -n {number} \"{message}\"")
     
-    # Execute the termux-sms-send command
+    # Execute the termux-sms-send command and capture the result
     result = os.system(f'termux-sms-send -n {number} "{message}"')
 
     # Check the result of the command
@@ -27,6 +27,7 @@ def send_sms_termux(number, message):
         log_sms(number, message)  # Log the sent message
     else:
         print("[!] Failed to send SMS.")
+        print(f"[DEBUG] Command failed with result code: {result}")
 
 def send_bulk_sms(numbers, message, num_messages):
     """Send multiple SMS to numbers"""

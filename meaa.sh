@@ -5,8 +5,8 @@ send_sms_via_email() {
     local phone_number=$1
     local carrier=$2
     local message=$3
-    local gmail_user="your-email@gmail.com"      # Replace with your Gmail address
-    local gmail_password="your-email-password"   # Replace with your Gmail password or App Password
+    local gmail_user="invention013654@gmail.com"      # Replace with your Gmail address
+    local gmail_password="93a71s77"   # Replace with your Gmail password or App Password
 
     # Define email-to-SMS gateways for some common carriers
     declare -A carriers

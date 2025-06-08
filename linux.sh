@@ -50,19 +50,19 @@ readonly DATE=$(date +"%A, %B %d %Y %H:%M:%S")
 # Display banner
 cat <<EOF
 ${BOLD}${GREEN}================================================================================
-${BLUE}*                         LINUX SYSTEM INFORMATION                          *
-${GREEN}*--------------------------------------------------------------------------------*
-${WHITE}*  ${YELLOW}Hostname${WHITE}: ${HOSTNAME}${RESET}$(printf '%*s' $((55 - ${#HOSTNAME})) "")*
-${WHITE}*  ${YELLOW}OS${WHITE}: ${OS}${RESET}$(printf '%*s' $((63 - ${#OS})) "")*
-${WHITE}*  ${YELLOW}Kernel${WHITE}: ${KERNEL}${RESET}$(printf '%*s' $((60 - ${#KERNEL})) "")*
-${WHITE}*  ${YELLOW}Uptime${WHITE}: ${UPTIME}${RESET}$(printf '%*s' $((60 - ${#UPTIME})) "")*
-${WHITE}*  ${YELLOW}CPU${WHITE}: ${CPU} (${CORES} cores)${RESET}$(printf '%*s' $((48 - ${#CPU} - ${#CORES} - 10)) "")*
-${WHITE}*  ${YELLOW}Memory${WHITE}: ${MEMORY}${RESET}$(printf '%*s' $((60 - ${#MEMORY})) "")*
-${WHITE}*  ${YELLOW}Load Avg${WHITE}: ${LOAD}${RESET}$(printf '%*s' $((58 - ${#LOAD})) "")*
-${WHITE}*  ${YELLOW}Disk (/)${WHITE}: ${DISK}${RESET}$(printf '%*s' $((58 - ${#DISK})) "")*
-${WHITE}*  ${YELLOW}IP Address${WHITE}: ${IP}${RESET}$(printf '%*s' $((56 - ${#IP})) "")*
-${GREEN}*--------------------------------------------------------------------------------*
-${WHITE}*  ${YELLOW}Date${WHITE}: ${DATE}${RESET}$(printf '%*s' $((58 - ${#DATE})) "")*
-${GREEN}================================================================================
+${BLUE}*                         LINUX SYSTEM INFORMATION                                                             *
+${GREEN}*--------------------------------------------------------------------------------                             *
+${WHITE}*  ${YELLOW}Hostname${WHITE}: ${HOSTNAME}${RESET}$(printf '%*s' $((55 - ${#HOSTNAME})) "")                    *
+${WHITE}*  ${YELLOW}OS${WHITE}: ${OS}${RESET}$(printf '%*s' $((63 - ${#OS})) "")                                      *
+${WHITE}*  ${YELLOW}Kernel${WHITE}: ${KERNEL}${RESET}$(printf '%*s' $((60 - ${#KERNEL})) "")                          *
+${WHITE}*  ${YELLOW}Uptime${WHITE}: ${UPTIME}${RESET}$(printf '%*s' $((60 - ${#UPTIME})) "")                          *
+${WHITE}*  ${YELLOW}CPU${WHITE}: ${CPU} (${CORES} cores)${RESET}$(printf '%*s' $((48 - ${#CPU} - ${#CORES} - 10)) "") *
+${WHITE}*  ${YELLOW}Memory${WHITE}: ${MEMORY}${RESET}$(printf '%*s' $((60 - ${#MEMORY})) "")                          *
+${WHITE}*  ${YELLOW}Load Avg${WHITE}: ${LOAD}${RESET}$(printf '%*s' $((58 - ${#LOAD})) "")                            *
+${WHITE}*  ${YELLOW}Disk (/)${WHITE}: ${DISK}${RESET}$(printf '%*s' $((58 - ${#DISK})) "")                            *
+${WHITE}*  ${YELLOW}IP Address${WHITE}: ${IP}${RESET}$(printf '%*s' $((56 - ${#IP})) "")                              *
+${GREEN}*--------------------------------------------------------------------------------                             *
+${WHITE}*  ${YELLOW}Date${WHITE}: ${DATE}${RESET}$(printf '%*s' $((58 - ${#DATE})) "")                                *
+${GREEN}=======================================================================================
 ${BLUE}${BOLD}System is operational and ready for use. Have a productive session!${RESET}
 EOF

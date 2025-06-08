@@ -74,8 +74,8 @@ ${BOLD}${MAGENTA}
  ║${GREEN}  ${BOLD}➤ OS:${RESET} ${WHITE}${OS}${MAGENTA}$(printf '%*s' $((43 - ${#OS})) "")║${GREEN}  ${BOLD}➤ Load:${RESET} ${WHITE}${LOAD}${MAGENTA}$(printf '%*s' $((25 - ${#LOAD})) "")║
  ║${GREEN}  ${BOLD}➤ Kernel:${RESET} ${WHITE}${KERNEL}${MAGENTA}$(printf '%*s' $((40 - ${#KERNEL})) "")║${GREEN}  ${BOLD}➤ Memory:${RESET} ${WHITE}${MEMORY}${MAGENTA}$(printf '%*s' $((25 - ${#MEMORY})) "")║
  ║${GREEN}  ${BOLD}➤ CPU:${RESET} ${WHITE}${CPU}${MAGENTA}$(printf '%*s' $((43 - ${#CPU})) "")║${GREEN}  ${BOLD}➤ IP:${RESET} ${WHITE}${IP}${MAGENTA}$(printf '%*s' $((25 - ${#IP})) "")║
- ╠════════════════════════════════════════════╩═══════════════════════════════╣
+ ╠════════════════════════════════════════════╩═════════════════════════════════════════╣
  ║${BOLD}${YELLOW}  Date: ${WHITE}${DATE}${MAGENTA}$(printf '%*s' $((70 - ${#DATE})) "")║
- ╚════════════════════════════════════════════════════════════════════════════╝
+ ╚══════════════════════════════════════════════════════════════════════════════════════╝
 ${RESET}
 EOF

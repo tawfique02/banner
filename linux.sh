@@ -76,6 +76,7 @@ ${BOLD}${MAGENTA}
  ║${GREEN}  ${BOLD}➤ CPU:${RESET} ${WHITE}${CPU}${MAGENTA}$(printf '%*s' $((43 - ${#CPU})) "")║${GREEN}  ${BOLD}➤ IP:${RESET} ${WHITE}${IP}${MAGENTA}$(printf '%*s' $((25 - ${#IP})) "")║
  ╠════════════════════════════════════════════╩═════════════════════════════════════════╣
  ║${BOLD}${YELLOW}  Date: ${WHITE}${DATE}${MAGENTA}$(printf '%*s' $((70 - ${#DATE})) "")║
+ ║${BOLD}${YELLOW} Developer Name: Tawfique Elahey                                      ║
  ╚══════════════════════════════════════════════════════════════════════════════════════╝
 ${RESET}
 EOF
